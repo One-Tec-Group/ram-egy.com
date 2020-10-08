@@ -1,0 +1,15 @@
+<?php defined('BASEPATH') OR exit('No direct script access allowed'); ?>
+
+ERROR - 2019-09-06 10:35:06 --> Could not find the language line "player_info"
+ERROR - 2019-09-06 10:35:06 --> Could not find the language line "player_contact"
+ERROR - 2019-09-06 10:35:06 --> Could not find the language line "player_skills"
+ERROR - 2019-09-06 10:35:06 --> Could not find the language line "player_data"
+ERROR - 2019-09-06 10:35:06 --> Could not find the language line "player_medicine"
+ERROR - 2019-09-06 10:35:06 --> Could not find the language line "player_account"
+ERROR - 2019-09-06 10:35:06 --> Could not find the language line "student_edit_password"
+ERROR - 2019-09-06 23:37:23 --> Could not find the language line "registerNO"
+ERROR - 2019-09-06 23:37:23 --> Could not find the language line "registerNO"
+ERROR - 2019-09-06 23:37:23 --> Could not find the language line "registerNO"
+ERROR - 2019-09-06 23:37:23 --> Could not find the language line "registerNO"
+ERROR - 2019-09-06 23:37:23 --> Could not find the language line "registerNO"
+ERROR - 2019-09-06 23:37:23 --> Could not find the language line "registerNO"

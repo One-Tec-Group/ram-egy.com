@@ -1,0 +1,180 @@
+<div class="col-md-12">
+  <?php
+    if($this->session->userdata('type')=="admin"){
+  ?>
+  <div class="box">
+    <div class="box-body">
+      <a class="btn btn-app" href="<?php echo base_url('company_setting'); ?>">
+        <?php echo checkEmpty($company_setting->count); ?>
+        <i class="fa fa-diamond text-blue"></i> Company Setting
+      </a>
+      <a class="btn btn-app" href="<?php echo base_url('category/add'); ?>">
+        <?php echo checkEmpty($category->count); ?>
+        <i class="fa fa-tags text-green"></i> Add Category
+      </a>
+      <a class="btn btn-app" href="<?php echo base_url('discount/add'); ?>">
+        <?php echo checkEmpty($discount->count); ?>
+        <i class="fa fa-hourglass text-gray"></i> Add Discount
+      </a>
+      <a class="btn btn-app" href="<?php echo base_url('branch/add'); ?>">
+        <?php echo checkEmpty($branch->count); ?>
+        <i class="fa fa-suitcase text-yellow"></i> Add Branch
+      </a>
+      <a class="btn btn-app" href="<?php echo base_url('brand/add'); ?>">
+        <?php echo checkEmpty($brand->count); ?>
+        <i class="fa fa-bold text-maroon"></i> Add Brand
+      </a>
+      <a class="btn btn-app" href="<?php echo base_url('warehouse/add'); ?>">
+        <?php echo checkEmpty($warehouse_count->count); ?>
+        <i class="fa fa-university text-suffron"></i> Add Warehouse
+      </a>
+      <a class="btn btn-app" href="<?php echo base_url('product/add'); ?>">
+        <?php echo checkEmpty($product->count); ?>
+        <i class="fa fa-cube text-blue"></i> Add Product
+      </a>
+      <a class="btn btn-app" href="<?php echo base_url('supplier/add'); ?>">
+        <?php echo checkEmpty($supplier->count); ?>
+        <i class="fa fa-user text-maroon"></i> Add Supplier
+      </a>
+      <a class="btn btn-app" href="<?php echo base_url('customer/add'); ?>">
+        <?php echo checkEmpty($customer->count); ?>
+        <i class="fa fa-user text-green"></i> Add Customer
+      </a>
+      <a class="btn btn-app" href="<?php echo base_url('biller/add'); ?>">
+        <?php echo checkEmpty($biller->count); ?>
+        <i class="fa fa-user text-red"></i> Add Biller
+      </a>
+    </div>
+  </div>
+  <?php
+      }
+  ?>
+  <!-- Application buttons -->
+  <div class="box">
+    <div class="box-body">
+      <?php
+        if($this->session->userdata('type')=="admin" || $this->session->userdata('type')=="purchaser"){
+      ?>
+      <a class="btn btn-app" href="<?php echo base_url('product/add'); ?>">
+        <i class="fa fa-cube text-blue"></i> Add Product
+      </a>
+      <?php
+        }
+      ?>
+      <?php
+        if($this->session->userdata('type')=="admin" || $this->session->userdata('type')=="purchaser"){
+      ?>
+      <a class="btn btn-app" href="<?php echo base_url('purchase/add'); ?>">
+        <i class="fa fa-square-o text-green"></i> Add Purchase
+      </a>
+      <?php
+        }
+      ?>
+      <?php
+        if($this->session->userdata('type')=="admin" || $this->session->userdata('type')=="sales_person"){
+      ?>
+      <a class="btn btn-app" href="<?php echo base_url('sales/add'); ?>">
+        <i class="fa fa-shopping-cart text-aqua"></i> Add Sales
+      </a>
+      <a class="btn btn-app" href="<?php echo base_url('quotation/add'); ?>">
+        <i class="fa fa-star text-green"></i> Add Quotation
+      </a>
+      <?php
+        }
+      ?>
+      <?php
+        if($this->session->userdata('type')=="admin" || $this->session->userdata('type')=="purchaser"){
+      ?>
+      <a class="btn btn-app" href="<?php echo base_url('transfer/add'); ?>">
+        <i class="fa fa-th-large text-yellow"></i> Add Transfer
+      </a>
+      <?php
+        }
+      ?>
+      <?php
+        if($this->session->userdata('type')=="admin"){
+      ?>
+      <a class="btn btn-app" href="<?php echo base_url('bank_account/add'); ?>">
+        <i class="fa fa-desktop text-maroon"></i> Add Bank Account
+      </a>
+      <a class="btn btn-app" href="<?php echo base_url('biller/add'); ?>">
+        <i class="fa fa-user text-red"></i> Add Biller
+      </a>
+      <a class="btn btn-app" href="<?php echo base_url('auth/create_user'); ?>">
+        <i class="fa fa-user text-aqua"></i> Add User
+      </a>
+      <?php
+        }
+      ?>
+      <?php
+        if($this->session->userdata('type')=="admin" || $this->session->userdata('type')=="sales_person"){
+      ?>
+      <a class="btn btn-app" href="<?php echo base_url('customer/add'); ?>">
+        <i class="fa fa-user text-green"></i> Add Customer
+      </a>
+      <?php
+        }
+      ?>
+      <?php
+        if($this->session->userdata('type')=="admin" || $this->session->userdata('type')=="purchaser"){
+      ?>
+      <a class="btn btn-app" href="<?php echo base_url('supplier/add'); ?>">
+        <i class="fa fa-user text-maroon"></i> Add Supplier
+      </a>
+      <?php
+        }
+      ?>
+      <?php
+        if($this->session->userdata('type')=="admin" || $this->session->userdata('type')=="purchaser" || $this->session->userdata('type')=="sales_person"){
+      ?>
+      <a class="btn btn-app" href="<?php echo base_url('credit_debit_note/add'); ?>">
+        <i class="fa fa-file-o text-yellow"></i> Add C/D Note
+      </a>
+      <?php
+        }
+      ?>
+      <?php
+        if($this->session->userdata('type')=="admin" || $this->session->userdata('type')=="manager"){
+      ?>
+      <a class="btn btn-app" href="<?php echo base_url('category/add'); ?>">
+        <i class="fa fa-tags text-green"></i> Add Category
+      </a>
+      <a class="btn btn-app" href="<?php echo base_url('subcategory/add'); ?>">
+        <i class="fa fa-qrcode text-blue"></i> Add Subcategory
+      </a>
+      <!-- <a class="btn btn-app" href="<?php echo base_url('tax/add'); ?>">
+        <i class="fa fa-legal text-aqua"></i> Add Tax
+      </a> -->
+      <a class="btn btn-app" href="<?php echo base_url('discount/add'); ?>">
+        <i class="fa fa-hourglass text-gray"></i> Add Discount
+      </a>
+      <a class="btn btn-app" href="<?php echo base_url('branch/add'); ?>">
+        <i class="fa fa-suitcase text-yellow"></i> Add Branch
+      </a>
+      <a class="btn btn-app" href="<?php echo base_url('brand/add'); ?>">
+        <i class="fa fa-bold text-maroon"></i> Add Brand
+      </a>
+      <?php
+        if($this->session->userdata('type')=="admin" || $this->session->userdata('type')=="purchaser"){
+      ?>
+      <a class="btn btn-app" href="<?php echo base_url('warehouse/add'); ?>">
+        <i class="fa fa-university text-suffron"></i> Add Warehouse
+      </a>
+      <?php } ?>
+      <a class="btn btn-app" href="<?php echo base_url('expense_category/add'); ?>">
+        <i class="fa fa-envelope-o text-yellow"></i> Add Expense category
+      </a>
+      <a class="btn btn-app" href="<?php echo base_url('uqc/add'); ?>">
+        <i class="fa fa-legal text-aqua"></i> Add UQC
+      </a>
+      <a class="btn btn-app" href="<?php echo base_url('payment_method/add'); ?>">
+        <i class="fa fa-th-large text-maroon"></i> Add Payment Method
+      </a>
+      <?php
+        }
+      ?>
+    </div>
+    <!-- /.box-body -->
+  </div>
+  <!-- /.box -->
+</div>

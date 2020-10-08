@@ -1,0 +1,29 @@
+a:3:{s:4:"time";i:1548600218;s:3:"ttl";i:3600;s:4:"data";s:939:"
+
+<!DOCTYPE html>
+<html  class="no-js" lang="en-US">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta http-equiv="Content-Type" content="text/html">
+    <meta content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no" name="viewport">
+
+    <link rel="SHORTCUT ICON" href="<?php echo  base_url('uploads/images/'.frontendData::get_backend('photo')) ; ?>">
+    <title> <?php echo  frontendData::get_backend('sname') ; ?>  </title>
+
+    <?php echo $this->_include('views/partials/headerAssets'); ?>
+</head>
+<body>
+    <header id="home">
+        <?php echo $this->_include('views/partials/topbar'); ?>
+        <?php echo $this->_include('views/partials/navbar'); ?>
+    </header>
+
+    <?php echo $this->_yield('content'); ?>
+    <?php echo $this->_include('views/partials/footer'); ?>
+    <?php echo $this->_include('views/partials/footerAssets'); ?>
+</body>
+</html>
+
+
+";}

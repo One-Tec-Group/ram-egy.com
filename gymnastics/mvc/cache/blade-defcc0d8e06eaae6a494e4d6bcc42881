@@ -1,0 +1,74 @@
+a:3:{s:4:"time";i:1547470262;s:3:"ttl";i:3600;s:4:"data";s:3655:"
+
+<?php $this->_section_start('content'); ?>
+
+	<section id="events" class="events-area area-padding">
+	    <div class="container">
+	        <div class="row">
+	            <div class="col-md-9">
+	                <div class="single-event-details">
+	                    <div class="eventView-img">
+	                        <a href="#"><img src="<?php echo  imageLinkWithDefatulImage($eventView->photo, 'holiday.png') ; ?>" alt=""></a>
+	                    </div>
+	                    <div class="event-content">
+	                        <div class="event-meta">
+	                            <div class="event-date first-date">
+	                                <?php echo  date("d", strtotime($eventView->fdate)) ; ?>
+	                                <span><?php echo  date("M", strtotime($eventView->fdate)) ; ?></span>
+	                            </div>
+	                            <?php if($eventView->fdate != $eventView->tdate): ?>
+		                            <div class="event-date second-date">
+		                                <?php echo  date("d", strtotime($eventView->tdate)) ; ?>
+		                                <span><?php echo  date("M", strtotime($eventView->tdate)) ; ?></span>
+		                            </div>
+	                            <?php endif; ?>
+	                            <div class="event-info">
+	                                <h4><?php echo  $eventView->title ; ?></h4>
+	                                <div class="event-time">
+	                                    <span class="event-title">Time: </span>
+	                                    <span><?php echo  date("h:i A", strtotime($eventView->ftime)) ; ?> - <?php echo  date("h:i A", strtotime($eventView->ttime)) ; ?></span>
+	                                </div>
+	                            </div>
+	                        </div>
+	                        <p><?php echo  $eventView->details ; ?></p>
+	                    </div>
+	                </div>
+	            </div>
+	            <div class="col-md-3">
+	                <h4 class="recent-event-title text-capitalize">Recent events</h4>
+					
+					<?php if(count($events)): ?>
+	                    <?php $i = 1; ?>
+	                    <?php foreach($events as $event): ?>
+	                        <?php if($i <= 9): ?>
+								<div class="recent-events-list">
+				                    <div class="eventView-img">
+				                        <a href="<?php echo  base_url('frontend/event/'.$event->eventID) ; ?>"><img src="<?php echo  imageLinkWithDefatulImage($event->photo, 'holiday.png') ; ?>" alt=""></a>
+				                    </div>
+
+				                    <div class="event-content">
+				                        <div class="event-meta">
+				                            <div class="event-info">
+				                                <h4><a href="<?php echo  base_url('frontend/event/'.$event->eventID) ; ?>"><?php echo  $event->title ; ?></a></h4>
+				                                <div class="event-time">
+				                                    <span class="event-title">Time: </span>
+				                                    <span><?php echo  date("h:i A", strtotime($event->ftime)) ; ?> - <?php echo  date("h:i A", strtotime($event->ttime)) ; ?></span>
+				                                </div>
+				                            </div>
+				                        </div>
+				                    </div>
+				                </div>
+	                        <?php endif; ?>
+	                    <?php endforeach; ?>
+	                <?php endif; ?>
+	            </div>
+	        </div>
+	    </div>
+	</section>
+
+<?php $this->_section_end(); ?>
+
+
+
+<?php echo $this->_include('views/layouts/master'); ?>
+";}

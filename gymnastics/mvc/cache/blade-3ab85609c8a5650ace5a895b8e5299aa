@@ -1,0 +1,84 @@
+a:3:{s:4:"time";i:1548586914;s:3:"ttl";i:3600;s:4:"data";s:3964:"
+
+
+<?php $this->_section_start('content'); ?>
+
+    <!-- bradcame area  -->
+    <div class="bradcam-area area-padding">
+        <div class="container">
+            <div class="row">
+                <div class="col-xs-12">
+                    <div class="section-title white-title bradcam-title text-uppercase text-center">
+                        <h2> <?php echo  $post->title ; ?> </h2>
+                        <span class="star"></span>
+                        <span class="star"></span>
+                        <span class="star"></span>
+                    </div>
+                </div>
+                <div class="bradcam-wrap text-center">
+                    <nav class="bradcam-inner">
+                      <a class="bradcam-item text-uppercase" href="<?php echo  base_url('frontend/'.$homepageType.'/'.$homepage->url) ; ?>"><?php echo  $homepageTitle ; ?></a>
+                      <span class="brd-separetor">/</span>
+                      <span class="bradcam-item active text-uppercase"><?php echo  $post->title ; ?></span>
+                    </nav>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- bradcame area  -->
+
+
+    <section id="about" class="about-area area-padding">
+        <div class="container">
+            <div class="row">
+                <div class="col-sm-8 col-xs-12">
+                    <div class="blog-section">
+                        <?php if(count($post)): ?>
+                            <article class="blog">
+                                <header>
+                                    <a href="<?php echo  base_url('frontend/post/'.$post->url) ; ?>">
+                                        <?php echo  $post->title ; ?>
+                                    </a> 
+                                </header>
+                                <div>Posted on <?php echo  date('dS F, Y', strtotime($post->publish_date)) ; ?> by <?php if(isset($allUser[$post->create_usertypeID][$post->create_userID])): ?> <?php echo  $allUser[$post->create_usertypeID][$post->create_userID]->name ; ?> <?php else: ?> <?php echo  '' ; ?> <?php endif; ?></div>
+
+                                <div class="blog-body">
+                                    <?php if(count($featured_image)): ?>
+                                        <a href="<?php echo  base_url('frontend/post/'.$post->url) ; ?>">
+                                            <img class="fixedsize" src="<?php echo  base_url('uploads/gallery/'.$featured_image->file_name) ; ?>">
+                                        </a>       
+                                    <?php endif; ?>
+
+                                    <p>
+                                        <?php echo  htmlspecialchars_decode($post->content) ; ?>
+                                    </p>
+
+                                </div>
+                            </article>
+                        <?php endif; ?>
+                    </div>
+                </div>
+
+                <div class="col-xs-12 col-sm-4">
+                    <div class="blog-recennt-post">
+                        <h2><span>Recent</span> Posts</h2> 
+                        <?php if(count($posts)): ?>
+                            <?php $i=1; ?> 
+                            <?php foreach($posts as $post): ?>
+                                <div class="post-title"><a href="<?php echo  base_url('frontend/post/'.$post->url) ; ?>"> <i class="fa fa-arrow-right"></i> <?php echo  namesorting(strip_tags($post->title), 75) ; ?></a></div>
+                                <?php if($i == 6): ?>
+                                    <?php break; ?>
+                                <?php endif; ?>
+                                <?php $i++; ?>
+                            <?php endforeach; ?>
+                        <?php endif; ?>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+    </section>
+<?php $this->_section_end(); ?>
+
+<?php echo $this->_include('views/layouts/master'); ?>
+";}

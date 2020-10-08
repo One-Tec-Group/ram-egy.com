@@ -1,0 +1,29 @@
+<?php
+
+$lang['panel_title'] = "الموضوع";
+$lang['add_title'] = "إضافة  الموضوع";
+$lang['slno'] = "#";
+$lang['subject_class_name'] = "فئة اسم";
+$lang['subject_teacher_name'] = "المدرب اسم";
+$lang['subject_student'] = "لاعب";
+$lang['subject_name'] = "الموضوع اسم";
+$lang['subject_author'] = "الموضوع المؤلف";
+$lang['subject_code'] = "الموضوع كود";
+$lang['subject_teacher'] = "المدرب";
+$lang['subject_classes'] = "الدرجة";
+$lang['subject_type'] = "نوع";
+$lang['subject_optional'] = "اختياري";
+$lang['subject_mandatory'] = "إلزامية";
+$lang['subject_passmark'] = "تمر علامة";
+$lang['subject_finalmark'] = "النهائي علامة";
+$lang['subject_select_class'] = "حدد فئة";
+$lang['subject_select_type'] = "حدد نوع";
+$lang['subject_select_classes'] = "حدد فئة";
+$lang['subject_select_teacher'] = "حدد المدرب";
+$lang['subject_select_student'] = "حدد لاعب";
+$lang['action'] = "العمل";
+$lang['view'] = "عرض";
+$lang['edit'] = "تحرير";
+$lang['delete'] = "حذف";
+$lang['add_subject'] = "إضافة الموضوع";
+$lang['update_subject'] = "تحديث الموضوع";

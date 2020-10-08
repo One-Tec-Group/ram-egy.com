@@ -1,0 +1,61 @@
+a:3:{s:4:"time";i:1548604876;s:3:"ttl";i:3600;s:4:"data";s:2398:"
+
+
+<?php $this->_section_start('content'); ?>
+    <?php if(count($sliders)): ?>
+        <div id="main-slider" class="slider-area">
+        <?php foreach($sliders as $slider): ?>
+            <div class="single-slide">
+                <img src="<?php echo  base_url('uploads/gallery/'.$slider->file_name) ; ?>" alt="">
+                <div class="banner-overlay">
+                    <div class="container">
+                        <div class="caption style-2">
+                            <h2><?php echo  sentenceMap(htmlspecialchars_decode($slider->file_title), 17, '<span>', '</span>') ; ?></h2>
+                            <p><?php echo  htmlspecialchars_decode($slider->file_description) ; ?></p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        <?php endforeach; ?>
+        </div>
+    <?php endif; ?>
+
+    <section id="about" class="about-area area-padding">
+    	<div class="container">
+            <div class="row">
+                <div class="col-xs-12">
+                    <div class="section-title text-uppercase text-center">
+                        <h2>About Us</h2>
+                        <span class="star"></span>
+                        <span class="star"></span>
+                        <span class="star"></span>
+                    </div>
+                </div>
+            </div>
+
+    		<div class="row">
+        		<?php if(!count($featured_image)): ?>
+        			<div class="col-md-12">
+                        <div class="about-content">
+                            <p> <?php echo  htmlspecialchars_decode($page->content) ; ?> </p>
+                        </div>
+        			</div>
+        		<?php else: ?>
+                    <div class="col-md-6 col-md-push-6">
+                        <div class="content-img">
+                            <img src="<?php echo  imageLinkWithDefatulImage($featured_image->file_name, 'holiday.png', 'uploads/gallery/') ; ?>" />
+                        </div>
+                    </div>
+        			<div class="col-md-6 col-md-pull-6">
+                        <div class="about-content">
+                            <p> <?php echo  htmlspecialchars_decode($page->content) ; ?> </p>
+                        </div>
+        			</div>
+        		<?php endif; ?>
+    		</div>
+    	</div>
+    </section>
+<?php $this->_section_end(); ?>
+
+<?php echo $this->_include('views/layouts/master'); ?>
+";}

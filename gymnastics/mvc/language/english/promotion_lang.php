@@ -1,0 +1,59 @@
+<?php
+
+$lang['panel_title'] = "Promotion";
+$lang['add_title'] = "Add promotion";
+$lang['slno'] = "#";
+$lang['promotion_photo'] = "Photo";
+$lang['promotion_name'] = "Name";
+$lang['promotion_section'] = "Class";
+$lang['promotion_result'] = "Result";
+$lang['promotion_pass'] = "Pass";
+$lang['promotion_fail'] = "Fail";
+$lang['promotion_modarate'] = "Not Yet";
+$lang['promotion_phone'] = "Phone";
+$lang['promotion_classes'] = "Club";
+$lang['promotion_roll'] = "Roll";
+$lang['promotion_create_class'] = "Please create a new club";
+$lang['promotion_select_class'] = "Select Club";
+$lang['promotion_select_student'] = "Select Trainee";
+$lang['add_all_promotion'] = "All Promotion";
+$lang['promotion_alert'] = "Alert";
+$lang['promotion_ok'] = "Ok";
+$lang['promotion_success'] = "Promotion Success";
+$lang['promotion_emstudent'] = "Empty Trainee List";
+$lang['promotion_school_year'] = "Academic Year";
+$lang['promotion_promotion'] = "Promotion";
+$lang['promotion_exam'] = "Exam";
+$lang['promotion_mark_percentage'] = "Mark Percentage";
+$lang['promotion_pass_mark'] = "Pass Mark";
+$lang['promotion_type_normal'] = "Normal";
+$lang['promotion_type_advance'] = "Advance";
+$lang['promotion_mark_summary'] = "Mark Summary";
+$lang['promotion_view_summary'] = "View Summary";
+$lang['promotion_total'] = "Total";
+$lang['promotion_enroll'] = "Enroll To Club ";
+$lang['promotion_subject_status'] = "Subject Status";
+$lang['promotion_subject'] = "Subject";
+$lang['promotion_have_mark'] = "Trainee Have Mark";
+$lang['promotion_diff_mark'] = "Difference Mark";
+$lang['promotion_mark_status'] = "Mark Status";
+
+$lang['action'] = "Action";
+$lang['add_mark_setting'] = 'Promotion Mark Setting';
+$lang['add_promotion'] = 'Promotion To Club ';
+$lang['promotion_details_of_promotion'] = 'Details of Promotion';
+
+$lang['promotion_currentSchoolyear'] = 'Current Academic Year';
+$lang['promotion_promotionSchoolyear'] = 'Promotion Academic Year';
+$lang['promotion_currentClass'] = 'Current Club';
+$lang['promotion_promotionClass'] = 'Promotion Club';
+
+$lang['promotion_to'] = 'To';
+$lang['promotion_subject'] = 'Subject';
+$lang['promotion_message'] = 'Message';
+$lang['promotion_studentID'] = 'Trainee ID';
+$lang['promotion_classesID'] = 'Clubs ID';
+$lang['promotion_academicyear'] = 'Academic Year ID';
+$lang['promotion_data_not_found'] = "Don't have any data";
+$lang['promotion_permissionmethod'] = "Method not allowed";
+$lang['promotion_permission'] = "Permission not allowed";

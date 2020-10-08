@@ -1,0 +1,20 @@
+{
+    "protocol": "ftp",
+    "host": "pcasa.info",
+    "port": 21,
+    "user": "pcasa_pcasa.info",
+    "pass": "P@ssw0rd",
+    "promptForPass": false,
+    "remote": "/",
+    "secure": false,
+    "secureOptions": null,
+    "connTimeout": 10000,
+    "pasvTimeout": 10000,
+    "keepalive": 10000,
+    "watch":[
+        "dist/stylesheets/main.css",
+        "dist/stylesheets/",
+        "dist/stylesheets/*.css"
+    ],
+    "watchTimeout":500
+}

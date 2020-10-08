@@ -1,0 +1,30 @@
+a:3:{s:4:"time";i:1548595994;s:3:"ttl";i:3600;s:4:"data";s:1013:"
+
+
+<?php $this->_section_start('content'); ?>
+
+	<section id="notice" class="notice-area area-padding gray-bg">
+	    <div class="container">
+	        <div class="row">
+	            <div class="col-md-12">
+	                <div class="recen-single-notice">
+	                    <div class="recen-notice-content">
+	                        <h3><?php echo  $noticeView->title ; ?></h3>
+	                        <div class="notice-meta">
+	                            <span class="published-date">
+	                                <i class="fa fa-calendar"></i>
+	                                <?php echo  date('d M Y', strtotime($noticeView->date)) ; ?>
+	                            </span>
+	                        </div>
+	                        <p><?php echo  htmlspecialchars_decode($noticeView->notice) ; ?></p>
+	                    </div>
+	                </div>
+	            </div>
+	        </div>
+	    </div>
+	</section>
+
+<?php $this->_section_end(); ?>
+
+<?php echo $this->_include('views/layouts/master'); ?>
+";}

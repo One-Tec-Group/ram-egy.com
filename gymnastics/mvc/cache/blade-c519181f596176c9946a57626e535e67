@@ -1,0 +1,15 @@
+a:3:{s:4:"time";i:1548595725;s:3:"ttl";i:3600;s:4:"data";s:327:"
+
+<?php $this->_section_start('content'); ?>
+	<section id="about" class="about-area area-padding">
+		<div class="container">
+			<div class="row">
+				<div class="col-sm-12">
+    				<h1> 404 </h1>
+				</div> 
+			</div>
+		</div>
+	</section>
+<?php $this->_section_end(); ?>
+<?php echo $this->_include('views/layouts/master'); ?>
+";}

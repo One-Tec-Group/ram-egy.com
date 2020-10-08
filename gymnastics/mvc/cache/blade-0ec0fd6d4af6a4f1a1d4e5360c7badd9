@@ -1,0 +1,95 @@
+a:3:{s:4:"time";i:1560727779;s:3:"ttl";i:3600;s:4:"data";s:5335:"
+<footer>
+    <div class="footer-top-area area-padding">
+        <div class="container">
+            <div class="row">
+                <div class="col-sm-4">
+                    <div class="footer-widget">
+                        <!-- Start Logo -->
+                        <div class="logo footer-logo text-uppercase">
+                            <h1>
+                                <?php if(count($homepage)): ?>
+                                    <?php $hometype = (isset($homepage->pagesID) ? 'page' : (isset($homepage->postsID) ? 'post' : '')); ?>
+                                    <a href="<?php echo  base_url('frontend/'.$hometype.'/'.$homepage->url) ; ?>"> <?php echo  frontendColorStyle(namesorting($backend->sname, 16)) ; ?> </a>
+                                <?php else: ?>
+                                    <a> <?php echo  frontendColorStyle(namesorting($backend->sname, 16)) ; ?> </a>
+                                <?php endif; ?>
+
+                            </h1>
+                        </div>
+                        <!-- End Logo -->
+                        <p><?php echo  frontendData::get_frontend('description') ; ?></p>
+                        <div class="footer-social">
+                            <ul>
+                                <li><a href="<?php echo  frontendData::get_frontend('facebook') ; ?>"><i class="fa fa-facebook"></i></a></li>
+                                <li><a href="<?php echo  frontendData::get_frontend('twitter') ; ?>"><i class="fa fa-twitter"></i></a></li>
+                                <li><a href="<?php echo  frontendData::get_frontend('linkedin') ; ?>"><i class="fa fa-linkedin"></i></a></li>
+                                <li><a href="<?php echo  frontendData::get_frontend('youtube') ; ?>"><i class="fa fa-youtube"></i></a></li>
+                                <li><a href="<?php echo  frontendData::get_frontend('google') ; ?>"><i class="fa fa-google-plus"></i></a></li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+
+                <?php if(isset($menu['frontendSocialQueryMenus'])): ?>
+                    <?php if(count($menu['frontendSocialQueryMenus'])): ?>
+                        <div class="col-md-3 col-md-offset-1 col-sm-4">
+                            <div class="footer-widget">
+                                <h2>Information</h2>
+                                <ul>
+                        <?php $i = 1; ?>
+                        <?php $countFrontendSocialQueryMenus = count($menu['frontendSocialQueryMenus']); ?>
+                        <?php foreach ($menu['frontendSocialQueryMenus'] as $frontendSocialQueryMenu): ?>
+                            <?php 
+                                $url = '#';
+                                if($frontendSocialQueryMenu->menu_typeID == 1) {
+                                    if(isset($fpages[$frontendSocialQueryMenu->menu_pagesID])) {
+                                        $url = base_url('frontend/page/'.$fpages[$frontendSocialQueryMenu->menu_pagesID]->url);
+                                    }
+                                } elseif ($frontendSocialQueryMenu->menu_typeID == 2) {
+                                    if(isset($fposts[$frontendSocialQueryMenu->menu_pagesID])) {
+                                        $url = base_url('frontend/post/'.$fposts[$frontendSocialQueryMenu->menu_pagesID]->url);
+                                    }
+                                } elseif($frontendSocialQueryMenu->menu_typeID == 3) {
+                                    $url = $frontendSocialQueryMenu->menu_link;
+                                }
+                            ?>
+                            <li><a href="<?php echo  $url ; ?>"><?php echo  $frontendSocialQueryMenu->menu_label ; ?></a></li>
+                            <?php if($i == 5): ?>
+                                        </ul>
+                                    </div>
+                                </div>
+                                <?php if($countFrontendSocialQueryMenus > 5): ?>
+                                    <div class="col-md-3 col-md-offset-1 col-sm-4">
+                                        <div class="footer-widget">
+                                            <h2>Usefull links</h2>
+                                            <ul>
+                                <?php endif; ?>
+                            <?php endif; ?>
+                            <?php if(($i == 10) || ($countFrontendSocialQueryMenus == $i)): ?>
+
+                                        </ul>
+                                    </div>
+                                </div>
+                                <?php break; ?>
+                            <?php endif; ?>
+                            <?php $i++; ?>
+                        <?php endforeach; ?>
+                    <?php endif; ?>
+                <?php endif; ?>
+                
+            </div>
+        </div>
+    </div>
+    <div class="footer-area">
+        <div class="container">
+            <div class="row">
+                <div class="col-sm-12">
+                    <div class="copyright text-center">
+                        <?php echo  frontendData::get_backend('footer') ; ?>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</footer>";}
